@@ -3,134 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick's Services | Professional Property Maintenance</title>
+    <title>Patrick's Services | Premium Property Care</title>
     <style>
-        /* Base Styles */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            /* The Black & White Gradient */
-            background: linear-gradient(135deg, #000000 0%, #ffffff 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        :root {
+            --black: #0a0a0a;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+            --accent: #333;
         }
 
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(to bottom, var(--black) 0%, var(--white) 100%);
+            background-attachment: fixed;
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+        }
+
+        nav .logo {
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-left: 20px;
+            border: 1px solid white;
+            padding: 8px 16px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: white;
+            color: black;
+        }
+
+        /* Hero Section */
         header {
-            text-align: center;
-            padding: 60px 20px;
+            padding: 120px 10% 80px 10%;
             color: white;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             margin: 0;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-weight: 900;
+            line-height: 1.1;
         }
 
         header p {
-            font-style: italic;
-            opacity: 0.8;
+            font-size: 1.2rem;
+            max-width: 600px;
+            opacity: 0.7;
+            margin-top: 20px;
         }
 
         /* Services Section */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            flex: 1;
+        .section-title {
+            padding: 0 10%;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #666;
         }
 
-        .services-grid {
+        .services-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #ddd; /* Creates thin borders between items */
+            margin: 20px 10%;
             border: 1px solid #ddd;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
-            background: #fff;
+        .service-box {
+            background: white;
+            padding: 60px 40px;
+            transition: 0.4s;
         }
 
-        .service-card h3 {
+        .service-box:hover {
+            background: var(--gray);
+        }
+
+        .service-box h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: #000;
         }
 
-        /* Footer */
+        /* Contact Section */
+        .contact-section {
+            background: var(--black);
+            color: white;
+            margin: 100px 10% 40px 10%;
+            padding: 80px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-details {
+            font-size: 1.1rem;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+
+        .contact-details a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid #555;
+        }
+
+        .contact-details a:hover {
+            border-bottom-color: white;
+        }
+
         footer {
             text-align: center;
-            padding: 40px 20px;
-            font-size: 0.9rem;
-            color: #333;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Button Style */
-        .contact-btn {
-            display: inline-block;
-            margin-top: 50px;
-            padding: 15px 40px;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .contact-btn:hover {
-            background: #444;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .services-container { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.5rem; }
+            .contact-section { padding: 40px; }
+            nav { padding: 20px 5%; }
         }
     </style>
 </head>
 <body>
 
+    <nav>
+        <div class="logo">Patrick's</div>
+        <a href="#contact">Get Quote</a>
+    </nav>
+
     <header>
-        <h1>Patrick's Services</h1>
-        <p>Reliable. Professional. Year-Round Care.</p>
+        <h1>Precision Property<br>Maintenance.</h1>
+        <p>Providing elite snow removal, lawn care, and seasonal cleanup services for residential and commercial estates.</p>
     </header>
 
-    <div class="container">
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>❄️ Snow Removal</h3>
-                <p>Don't get snowed in. We provide fast, efficient clearing for driveways and walkways to keep you moving all winter.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>🌱 Lawn Mowing</h3>
-                <p>Expert cutting and edging to keep your lawn looking sharp and healthy throughout the growing season.</p>
-            </div>
-
-            <div class="service-card">
-                <h3>🍂 Leaf Raking</h3>
-                <p>Complete autumn cleanup. We clear your yard of debris and leaves so your grass can breathe.</p>
-            </div>
+    <div class="section-title">Our Capabilities</div>
+    <div class="services-container">
+        <div class="service-box">
+            <h3>Snow Removal</h3>
+            <p>Reliable 24/7 monitoring and clearing to ensure your property remains safe and accessible regardless of the weather.</p>
         </div>
-
-        <div style="text-align: center;">
-            <a href="mailto:your-email@example.com" class="contact-btn">Get a Free Estimate</a>
+        <div class="service-box">
+            <h3>Lawn Care</h3>
+            <p>Scheduled maintenance, precision mowing, and edging designed to enhance curb appeal and turf health.</p>
+        </div>
+        <div class="service-box">
+            <h3>Seasonal Raking</h3>
+            <p>Comprehensive leaf removal and debris clearing to protect your landscape during seasonal transitions.</p>
         </div>
     </div>
 
+    <section id="contact" class="contact-section">
+        <div class="contact-info">
+            <h2>Let's Talk.</h2>
+            <p>Ready to start your next project?</p>
+        </div>
+        <div class="contact-details">
+            <p><strong>Email:</strong> <a href="mailto:patrickmango49@gmail.com">patrickmango49@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+18607727035">+1 860-772-7035</a></p>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; Patrick's Services | All rights reserved</p>
+        &copy; Patrick's Services | All rights reserved
     </footer>
 
 </body>
