@@ -4,29 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Patrick's Property Services | Premium Property Care</title>
+<title>Patrick's Property Services</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
---black:#0b0b0c;
---dark:#121214;
---gray:#f5f5f7;
---accent:#ffffff;
---accent2:#e5e5e5;
+
+--black:#000;
+--dark:#0a0a0a;
+--gray:#f2f2f2;
+--mid:#888;
+--white:#fff;
+
 }
 
-html{
-scroll-behavior:smooth;
+*{
+
+box-sizing:border-box;
+
 }
 
 body{
+
 margin:0;
-font-family:'Poppins',sans-serif;
-background:var(--gray);
+
+font-family:"Inter",sans-serif;
+
 color:var(--black);
+
+background:linear-gradient(to bottom,var(--black),var(--white));
+
 }
 
 /* NAV */
@@ -34,149 +43,159 @@ color:var(--black);
 nav{
 
 position:fixed;
-width:100%;
+
 top:0;
 
+width:100%;
+
+padding:22px 8%;
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
 
-padding:18px 8%;
+background:rgba(0,0,0,.85);
 
-background:rgba(10,10,10,0.85);
+backdrop-filter:blur(6px);
 
-backdrop-filter:blur(10px);
-
-border-bottom:1px solid rgba(255,255,255,0.08);
-
-z-index:999;
 }
 
 .logo{
 
 color:white;
-font-weight:700;
-font-size:18px;
+
+font-weight:600;
+
 letter-spacing:1px;
+
 }
 
 .nav-btn{
 
 color:black;
-background:white;
 
-padding:10px 22px;
+background:white;
 
 text-decoration:none;
 
-font-weight:500;
+padding:10px 20px;
 
-border-radius:6px;
+border-radius:4px;
 
-transition:.25s;
+font-size:14px;
+
+transition:.2s;
+
 }
 
 .nav-btn:hover{
 
-background:#dcdcdc;
-transform:translateY(-2px);
+background:#ddd;
+
 }
 
 /* HERO */
 
 header{
 
-height:90vh;
+min-height:85vh;
 
 display:flex;
+
 flex-direction:column;
+
 justify-content:center;
 
 padding:0 8%;
 
-background:
-
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-
-url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop");
-
-background-size:cover;
-background-position:center;
-
 color:white;
+
 }
 
 header h1{
 
 font-size:64px;
+
+font-weight:900;
+
 margin:0;
 
-font-weight:800;
-
 letter-spacing:-1px;
+
 }
 
 header p{
 
+margin-top:20px;
+
 font-size:18px;
 
-max-width:550px;
+max-width:500px;
 
-opacity:.85;
+opacity:.8;
 
-margin-top:20px;
 }
 
 .hero-btn{
 
-display:inline-block;
-
 margin-top:30px;
 
-background:white;
-color:black;
+display:inline-block;
 
-padding:14px 30px;
+background:white;
+
+color:black;
 
 text-decoration:none;
 
-border-radius:8px;
+padding:14px 28px;
 
-font-weight:600;
+border-radius:4px;
 
-transition:.25s;
+font-weight:500;
+
+transition:.2s;
+
 }
 
 .hero-btn:hover{
 
-transform:translateY(-3px);
+background:#ddd;
 
-background:#e5e5e5;
 }
 
-/* SECTION */
+/* MAIN WHITE SECTION */
 
-.section{
+.main{
 
-padding:100px 8%;
+background:white;
+
+padding:120px 8%;
+
 }
 
-.section-title{
+/* TITLE */
 
-font-size:14px;
+.label{
+
+font-size:12px;
 
 letter-spacing:2px;
 
-color:#666;
+color:var(--mid);
 
 margin-bottom:10px;
+
 }
 
-.section h2{
+h2{
 
-font-size:40px;
+font-size:36px;
 
-margin:0 0 40px 0;
+margin:0 0 50px 0;
+
 }
 
 /* SERVICES */
@@ -185,47 +204,39 @@ margin:0 0 40px 0;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-gap:30px;
+gap:40px;
+
 }
 
-.card{
+.service{
 
-background:white;
+padding:10px 0;
 
-padding:40px;
-
-border-radius:10px;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-transition:.3s;
 }
 
-.card:hover{
+.service h3{
 
-transform:translateY(-8px);
+margin-bottom:10px;
 
-box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
-.card h3{
+.service p{
 
-margin-top:0;
+color:#555;
+
 }
 
 /* CONTACT */
 
 .contact{
 
-background:var(--black);
+margin-top:120px;
 
-color:white;
+padding-top:60px;
 
-border-radius:12px;
-
-padding:60px;
+border-top:1px solid #ddd;
 
 display:flex;
 
@@ -233,43 +244,40 @@ justify-content:space-between;
 
 flex-wrap:wrap;
 
-gap:30px;
-}
+gap:40px;
 
-.contact h2{
-
-margin-top:0;
-
-font-size:36px;
 }
 
 .contact a{
 
-color:white;
+color:black;
 
 text-decoration:none;
 
-border-bottom:1px solid #555;
+border-bottom:1px solid #ccc;
+
 }
 
 .contact a:hover{
 
-border-color:white;
+border-color:black;
+
 }
 
 /* FOOTER */
 
 footer{
 
-background:var(--dark);
-
-color:#777;
-
 text-align:center;
 
-padding:30px;
+padding:40px;
 
 font-size:13px;
+
+color:#666;
+
+background:white;
+
 }
 
 /* MOBILE */
@@ -279,16 +287,13 @@ font-size:13px;
 header h1{
 
 font-size:40px;
-}
 
-.contact{
-
-padding:40px;
 }
 
 }
 
 </style>
+
 </head>
 <body>
 
@@ -314,28 +319,31 @@ Get Quote
 
 <h1>
 
-Premium Property Care.
+Property Care.<br>
+
+Done Right.
 
 </h1>
 
 <p>
 
-Professional snow removal, lawn maintenance, and seasonal cleanup services trusted by homeowners.
+Snow removal, lawn care, and seasonal cleanup services with precision and reliability.
 
 </p>
 
 <a href="#contact" class="hero-btn">
 
-Request Free Quote
+Request Quote
 
 </a>
 
 </header>
 
 
-<section class="section">
+<div class="main">
 
-<div class="section-title">
+
+<div class="label">
 
 SERVICES
 
@@ -343,7 +351,7 @@ SERVICES
 
 <h2>
 
-What We Offer
+What We Do
 
 </h2>
 
@@ -351,7 +359,7 @@ What We Offer
 <div class="services">
 
 
-<div class="card">
+<div class="service">
 
 <h3>
 
@@ -361,14 +369,14 @@ Snow Removal
 
 <p>
 
-Fast, reliable snow clearing to keep your property safe and accessible all winter.
+Keeping your property clear, safe, and accessible during winter.
 
 </p>
 
 </div>
 
 
-<div class="card">
+<div class="service">
 
 <h3>
 
@@ -378,14 +386,14 @@ Lawn Care
 
 <p>
 
-Precision mowing, edging, and maintenance to keep your lawn looking perfect.
+Professional mowing and maintenance for a clean, sharp look.
 
 </p>
 
 </div>
 
 
-<div class="card">
+<div class="service">
 
 <h3>
 
@@ -395,7 +403,7 @@ Seasonal Cleanup
 
 <p>
 
-Leaf removal, debris cleanup, and seasonal care to protect your property.
+Leaf removal and seasonal property cleanup services.
 
 </p>
 
@@ -404,25 +412,21 @@ Leaf removal, debris cleanup, and seasonal care to protect your property.
 
 </div>
 
-</section>
 
-
-<section id="contact" class="section">
-
-<div class="contact">
+<div id="contact" class="contact">
 
 
 <div>
 
 <h2>
 
-Request a Quote
+Contact
 
 </h2>
 
 <p>
 
-Contact us today for a free estimate.
+Available for new clients.
 
 </p>
 
@@ -433,7 +437,7 @@ Contact us today for a free estimate.
 
 <p>
 
-Email:
+Email<br>
 
 <a href="mailto:patrickmango49@gmail.com">
 
@@ -446,9 +450,9 @@ patrickmango49@gmail.com
 
 <p>
 
-Phone:
+Phone<br>
 
-<a href="tel:+18607727035">
+<a href="tel:18607727035">
 
 860-772-7035
 
@@ -461,12 +465,13 @@ Phone:
 
 </div>
 
-</section>
+
+</div>
 
 
 <footer>
 
-© 2026 Patrick's Property Services. All Rights Reserved.
+© 2026 Patrick's Property Services
 
 </footer>
 
