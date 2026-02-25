@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick's Services | Professional Property Maintenance</title>
+    <style>
+        /* Base Styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            /* The Black & White Gradient */
+            background: linear-gradient(135deg, #000000 0%, #ffffff 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* Services Section */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #ddd;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: #fff;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        /* Button Style */
+        .contact-btn {
+            display: inline-block;
+            margin-top: 50px;
+            padding: 15px 40px;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #444;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Patrick's Services</h1>
+        <p>Reliable. Professional. Year-Round Care.</p>
+    </header>
+
+    <div class="container">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>❄️ Snow Removal</h3>
+                <p>Don't get snowed in. We provide fast, efficient clearing for driveways and walkways to keep you moving all winter.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🌱 Lawn Mowing</h3>
+                <p>Expert cutting and edging to keep your lawn looking sharp and healthy throughout the growing season.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🍂 Leaf Raking</h3>
+                <p>Complete autumn cleanup. We clear your yard of debris and leaves so your grass can breathe.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="mailto:your-email@example.com" class="contact-btn">Get a Free Estimate</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Patrick's Services | All rights reserved</p>
+    </footer>
+
+</body>
+</html>
